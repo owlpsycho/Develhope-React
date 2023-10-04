@@ -6,7 +6,10 @@ function App() {
 
   return (
     <>
-      <Welcome name="Denis" />
+    {/* se leviamo la prop name non viene stampato il nome ma solo "Welcome,"" */}
+      <Welcome  />
+    {/* se non aggiungo name="Denis" a <Welcome /> viene renderizzato il valiore che ho assegnato alla prop nella funzione */}
+
     </>
   )
 }
