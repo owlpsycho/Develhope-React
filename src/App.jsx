@@ -8,7 +8,7 @@ function App() {
     <>
     {/* se leviamo la prop name non viene stampato il nome ma solo "Welcome,"" */}
       <Welcome  />
-    {/* se non aggiungo name="Denis" a <Welcome /> viene renderizzato il valiore che ho assegnato alla prop nella funzione */}
+    {/* se non aggiungo name="Denis" a <Welcome /> viene renderizzato il valore che ho assegnato alla prop nella funzione */}
 
     </>
   )
