@@ -8,6 +8,7 @@ function App() {
     <>
       <Hello />
       <Hello />
+      {/* spunta due volte */}
     </>
   )
 }
