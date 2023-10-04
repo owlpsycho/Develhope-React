@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-import { Hello } from './Hello'
 
 function App() {
 
+
+  function sayHello (name){
+    return <h1>Hello, {name}!</h1>
+}
+
   return (
     <>
-      <Hello />
-      //darà come risultato solo "Hello, !" se non passo la variabile name//
+      {Hello (<span>Denis</span>)}
+      //questa volta non esce niente e mi da come errore "Hello is not defined"
     </>
   )
 }
