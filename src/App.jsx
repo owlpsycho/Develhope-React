@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import { Hello } from './Hello'
-import { Message } from './Message'
 
 function App() {
+
+    function Message () {
+        return <p>What a beautiful day!</p>
+    }
 
   return (
     <>
       <Hello />
-      <Message />
+      {Message()}
+      {/* si renderizza lo stesso */}
     </>
   )
 }
