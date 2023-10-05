@@ -2,7 +2,7 @@ export function Welcome({ name, age }) {
     return (
         <>
             <h1>Welcome, {name}</h1>
-            {age && <p>You are {age} years old!</p>}
+            {age>=18 && age<=65 && <p>You are {age} years old!</p>}
         </>
     )
 }
