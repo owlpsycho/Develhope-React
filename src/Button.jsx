@@ -1,3 +1,8 @@
 export function Button({event, name}){
-    return <button onClick={event}>{name}</button>
+    
+    return (
+        <>
+            <button onClick={event}>{name}</button>
+        </>
+    )
 }
