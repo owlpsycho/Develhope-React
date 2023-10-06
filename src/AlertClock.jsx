@@ -1,4 +1,4 @@
-import { Button } from "./Button"
+import "./App.css"
 
 export function AlertClock() {
     function handleButtonClick() {
@@ -7,7 +7,7 @@ export function AlertClock() {
         return (
             <div>
                 <p>Click the button to see the current time.</p>
-                <Button event={handleButtonClick} title="Click Me!" />
+                <button onClick={handleButtonClick}>Click Me!</button>
             </div>
         )
 }
