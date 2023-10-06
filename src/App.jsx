@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import { AlertClock } from './AlertClock'
 
 function App() {
 
   return (
     <>
-      
+      <AlertClock />
     </>
   )
 }
