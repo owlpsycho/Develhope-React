@@ -7,7 +7,7 @@ export function AlertClock() {
         return (
             <div>
                 <p>Click the button to see the current time.</p>
-                <Button onClick={handleButtonClick} title="Click Me!" />
+                <Button event={handleButtonClick} title="Click Me!" />
             </div>
         )
 }
