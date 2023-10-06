@@ -4,9 +4,13 @@ import { AlertClock } from './AlertClock'
 
 function App() {
 
+  function handleButtonClick() {
+    alert('Current time: ' + new Date().toLocaleTimeString())
+    }
+
   return (
     <>
-      <AlertClock />
+      <AlertClock event={handleButtonClick}/>
     </>
   )
 }
