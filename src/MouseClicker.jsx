@@ -4,10 +4,10 @@ export const MouseClicker = ({ name }) => {
     }
 
     const handleImgClicker = (event) => {
-        console.log(event.currentTarget.src)
+        console.log(event.currentTarget.src);
+        event.stopPropagation();
     }
 
-        //vengono eseguiti insieme a causa dell'effetto bubble di html dato che l'immagine si trova all'interno del bottone
 
     return (
         <>
