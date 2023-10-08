@@ -1,11 +1,10 @@
 export const MouseClicker = ({ name }) => {
     const handleClicker = (event) => {
-        console.log(event.currentTarget.name)
+        console.log(event.target.name)
     }
 
     const handleImgClicker = (event) => {
-        console.log(event.currentTarget.src);
-        event.stopPropagation();
+        console.log(event.target.src);
     }
 
 
