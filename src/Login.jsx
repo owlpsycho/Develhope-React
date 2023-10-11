@@ -19,12 +19,19 @@ export function Login({ onLogin }) {
     });
   }
 
-
   const isButtonDisabled = data.username === '' || data.password === '';
 
   const handleLogin = () => {
     onLogin(data);
   };
+
+  const handleReset = () => {
+    setData({
+      username: '',
+      password: '',
+      remember: false
+    });
+  }
 
   return (
     <>
@@ -33,6 +40,7 @@ export function Login({ onLogin }) {
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
         <button onClick={handleLogin} disabled={isButtonDisabled}>Login</button>
+        <button onClick={handleReset}>Reset</button>
       </form>
     </>
   )
