@@ -19,6 +19,7 @@ export function Login({ onLogin }) {
     });
   }
 
+
   const isButtonDisabled = data.username === '' || data.password === '';
 
   const handleLogin = () => {
@@ -30,7 +31,7 @@ export function Login({ onLogin }) {
       <form>
         <input type="text" name="username" value={data.username} onChange={handleInputChange} />
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
-        <input type="checkbox" name="remember" value={data.remember} onChange={handleInputChange} />
+        <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
         <button onClick={handleLogin} disabled={isButtonDisabled}>Login</button>
       </form>
     </>
