@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Login({ onLogin }) {
+export function Login({ event }) {
   const [data, setData] = useState({
     username: '',
     password: '',
