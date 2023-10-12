@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Login({ event }) {
+export function Login({ onLogin }) {
   const [data, setData] = useState({
     username: '',
     password: '',
@@ -19,9 +19,13 @@ export function Login({ event }) {
     });
   }
 
-  const handleReset = (event) => {
-    event.preventDefault()
-    
+  const isButtonDisabled = data.username === '' || data.password === '';
+
+  const handleLogin = () => {
+    onLogin(data);
+  };
+
+  const handleReset = () => {
     setData({
       username: '',
       password: '',
@@ -35,7 +39,7 @@ export function Login({ event }) {
         <input type="text" name="username" value={data.username} onChange={handleInputChange} />
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
-        <button onClick={(e) => event(e, data)} disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false}>Submit</button>
+        <button onClick={handleLogin} disabled={isButtonDisabled}>Login</button>
         <button onClick={handleReset}>Reset</button>
       </form>
     </>
