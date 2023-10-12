@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-export function Login({ onLogin }) {
+export function Login({ event }) {
   const [data, setData] = useState({
     username: '',
     password: '',
@@ -19,14 +19,11 @@ export function Login({ onLogin }) {
     });
   }
 
-  const isButtonDisabled = data.username === '' || data.password === '';
 
-  const handleLogin = (event) => {
-    event.preventDefault() //In questo modo evitiamo il comportamento predefinito di invio del modulo
-    console.log(data)
-  };
 
-  const handleReset = () => {
+  const handleReset = (event) => {
+    event.preventDefault()
+
     setData({
       username: '',
       password: '',
@@ -40,7 +37,7 @@ export function Login({ onLogin }) {
         <input type="text" name="username" value={data.username} onChange={handleInputChange} />
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
-        <button type="submit" disabled={isButtonDisabled}>Login</button>
+        <button disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false}>Submit</button>
         <button type="button" onClick={handleReset}>Reset</button>
       </form>
     </>
