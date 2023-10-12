@@ -21,7 +21,8 @@ export function Login({ onLogin }) {
 
   const isButtonDisabled = data.username === '' || data.password === '';
 
-  const handleLogin = () => {
+  const handleLogin = (event) => {
+    event.preventDefault()
     onLogin(data);
   };
 
