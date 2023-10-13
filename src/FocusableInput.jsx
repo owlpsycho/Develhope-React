@@ -1,15 +1,18 @@
 import { useEffect, useRef } from "react"
 
 export function FocusableInput(){
-    const _inputRef = useRef(null)
+    const _isMounted = useRef(false)
 
     useEffect(()=>{
-        _inputRef.current?.focus()
+        if (!_isMounted.current) {
+            console.log("montato per la prima volta")
+            _isMounted.current = true
+        }
     }, [])
 
     return (
         <>
-            <input ref={_inputRef} type="text" />
+            <input type="text" />
         </>
     )
 }
