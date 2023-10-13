@@ -15,7 +15,7 @@ export function UncontrolledLogin (){
 
 
         // METODO 2
-        const formData = new formData(event.target)
+        const formData = new FormData(event.target)
 
         const data = {
             username: formData.get("username"),
