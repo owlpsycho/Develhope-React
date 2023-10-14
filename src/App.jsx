@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <TodoList items={[]}/>
+      <TodoList items={["Prova 1", "Prova 2"]}/>
     </>
   )
 }
