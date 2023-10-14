@@ -16,8 +16,8 @@ const TodoList = ({ items }) => {
         setToDoInput("");
     }
 
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
             handleAddToDo();
         }
     }
