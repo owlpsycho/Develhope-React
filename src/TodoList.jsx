@@ -26,12 +26,12 @@ const TodoList = ({ items }) => {
         setToDoList([]);
     }
 
-    const handleRemoveItems = (index) => {
+    const handleRemoveItems = (index) => {  
         setToDoList(toDoList.filter((element, i) => i !== index));
     }
 
     return (
-        <div>
+        <>
             <ul>
                 {toDoList.map((item, index) => (
                     <li key={index}>
@@ -43,7 +43,7 @@ const TodoList = ({ items }) => {
             <input type="text" value={toDoInput} onChange={handleInputChange} onKeyPress={handleKeyPress} />
             <button onClick={handleAddToDo}>Add</button>
             <button onClick={handleResetItemsArray}>Reset</button>
-        </div>
+        </>
     );
 }
 
