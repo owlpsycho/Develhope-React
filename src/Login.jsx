@@ -33,7 +33,13 @@ export function Login({ onLogin }) {
         <input type="text" name="username" value={data.username} onChange={handleInputChange} />
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
-        <button onClick={handleLogin} disabled={isButtonDisabled}>Login</button>
+        <button 
+        style={{backgroundColor: data.password.length < 8 ? "red" : "green",
+                color: "white"}}
+        onClick={handleLogin} 
+        disabled={isButtonDisabled}>
+          Login
+        </button>
       </form>
     </>
   )
