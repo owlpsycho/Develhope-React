@@ -8,7 +8,10 @@ export function Counter(){
 
     return (
         <>
-            <h2>{count}</h2>
+            <h2 style={{
+                backgroundColor: "blueviolet",
+                color: "white",
+            }}>{count}</h2>
             <button onClick={handleClick}>Click Me!</button>
         </>
     )
