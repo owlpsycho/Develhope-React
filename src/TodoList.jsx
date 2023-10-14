@@ -27,7 +27,7 @@ const TodoList = ({ items }) => {
     }
 
     const handleRemoveItems = (index) => {
-        setToDoList(toDoList.filter((i) => {i !== index}));
+        setToDoList(toDoList.filter((element, i) => i !== index));
     }
 
     return (
