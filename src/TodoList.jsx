@@ -14,6 +14,7 @@ const TodoList = ({ items }) => {
             toDoInput
         ]);
         setToDoInput("");
+        //l'avevo già aggiunta 😅
     }
 
     const handleKeyPress = (e) => {
