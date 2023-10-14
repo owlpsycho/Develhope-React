@@ -17,8 +17,8 @@ const TodoList = ({ items }) => {
         //l'avevo già aggiunta 😅
     }
 
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
             handleAddToDo();
         }
     }
