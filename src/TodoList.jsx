@@ -10,11 +10,10 @@ const TodoList = ({ items }) => {
 
     const handleAddToDo = () => {
         setToDoList([
-            ...toDoList, 
+            ...toDoList,
             toDoInput
         ]);
         setToDoInput("");
-        //l'avevo già aggiunta 😅
     }
 
     const handleKeyPress = (e) => {
@@ -24,18 +23,27 @@ const TodoList = ({ items }) => {
     }
 
     const handleResetItemsArray = () => {
-        setToDoList([])
+        setToDoList([]);
+    }
+
+    const handleRemoveItems = (index) => {
+        setToDoList(toDoList.filter((i) => {i !== index}));
     }
 
     return (
-        <>
+        <div>
             <ul>
-                {toDoList.map((item) => <li>{item}</li>)}
+                {toDoList.map((item, index) => (
+                    <li key={index}>
+                        {item}
+                        <button onClick={() => handleRemoveItems(index)}>Delete</button>
+                    </li>
+                ))}
             </ul>
             <input type="text" value={toDoInput} onChange={handleInputChange} onKeyPress={handleKeyPress} />
             <button onClick={handleAddToDo}>Add</button>
             <button onClick={handleResetItemsArray}>Reset</button>
-        </>
+        </div>
     );
 }
 
