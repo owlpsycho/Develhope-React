@@ -2,3 +2,11 @@
     background-color: white;
     border: 2px solid red;
 }
+
+.container-title{
+    color: blueviolet;
+}
+
+.container-content{
+    color: rebeccapurple;
+}

@@ -1,7 +1,12 @@
-export function Container({ children }){
+import "./Container.css"
+
+export function Container({ title, children }){
     
 
     return (
-        <div className="container">{children}</div>
+        <div className="container">
+            <div className="container-title">{title}</div>
+            <div className="container-content">{children}</div>
+        </div>
     )
 }
