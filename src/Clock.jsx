@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import "./Clock.scss"
+import "./Clock.scss";
 
 export const Clock = () => {
   const [time, setTime] = useState("");
