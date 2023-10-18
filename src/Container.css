@@ -1,12 +1,12 @@
-.container{
+.container {
     background-color: white;
     border: 2px solid red;
 }
 
-.container-title{
+.container-title {
     color: blueviolet;
 }
 
-.container-content{
+.container-content {
     color: rebeccapurple;
 }
