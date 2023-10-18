@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css'
 import { AlertClock } from "./AlertClock";
 
 function App() {
