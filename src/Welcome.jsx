@@ -1,6 +1,6 @@
 import { Age } from "./Age";
 
-export function Welcome({ name, age }) {
+export function Welcome({ name }) {
   return (
     <>
       <h1>Welcome, {name}</h1>
