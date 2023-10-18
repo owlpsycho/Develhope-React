@@ -1,41 +1,46 @@
 import React, { useState } from "react";
 
 const TodoList = ({ items }) => {
-    const [toDoInput, setToDoInput] = useState("");
-    const [toDoList, setToDoList] = useState(items);
+  const [toDoInput, setToDoInput] = useState("");
+  const [toDoList, setToDoList] = useState(items);
 
-    const handleInputChange = (event) => {
-        setToDoInput(event.target.value);
+  const handleInputChange = (event) => {
+    setToDoInput(event.target.value);
+  };
+
+  const handleAddToDo = () => {
+    setToDoList([...toDoList, toDoInput]);
+    setToDoInput("");
+    //l'avevo già aggiunta 😅
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleAddToDo();
     }
+  };
 
-    const handleAddToDo = () => {
-        setToDoList([
-            ...toDoList, 
-            toDoInput
-        ]);
-        setToDoInput("");
-    }
+  const handleResetItemsArray = () => {
+    setToDoList([]);
+  };
 
-    const handleKeyPress = (e) => {
-        if (e.key === "Enter") {
-            handleAddToDo();
-        }
-    }
-
-    const handleResetItemsArray = () => {
-        setToDoList([])
-    }
-
-    return (
-        <>
-            <ul>
-                {toDoList.map((item) => <li>{item}</li>)}
-            </ul>
-            <input type="text" value={toDoInput} onChange={handleInputChange} onKeyPress={handleKeyPress} />
-            <button onClick={handleAddToDo}>Add</button>
-            <button onClick={handleResetItemsArray}>Reset</button>
-        </>
-    );
-}
+  return (
+    <>
+      <ul>
+        {toDoList.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <input
+        type="text"
+        value={toDoInput}
+        onChange={handleInputChange}
+        onKeyPress={handleKeyPress}
+      />
+      <button onClick={handleAddToDo}>Add</button>
+      <button onClick={handleResetItemsArray}>Reset</button>
+    </>
+  );
+};
 
 export default TodoList;
