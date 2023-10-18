@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import TodoList from './TodoList'
+import { useState } from "react";
+import "./App.css";
+import TodoList from "./TodoList";
 
 function App() {
-
   return (
     <>
-      <TodoList items={[]}/>
+      <TodoList items={[]} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
