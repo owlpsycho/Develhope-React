@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import { Welcome } from './Welcome'
+import { Age } from "./Age";
+import "./App.css";
+import { Welcome } from "./Welcome";
 
 function App() {
-
   return (
     <>
-      <Welcome name="Denis" age={17} />
+      <Welcome name="Denis" />
+      <Age age={17} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
