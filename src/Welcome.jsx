@@ -1,12 +1,9 @@
-export function Welcome({ name, age }) {
-    return (
-      <>
-        {name === "John" && age > 18 && age < 65 && (
-          <div>
-            <h1>Welcome, {name}</h1>
-            <p>You are {age} years old!</p>
-          </div>
-        )}
-      </>
-    )
-  }
+import { Age } from "./Age";
+export function Welcome({ name }) {
+  return (
+    <>
+      {name === "John" && <p>Welcome,{name}</p>} 
+      <Age age={66} />
+    </>
+  );
+}
