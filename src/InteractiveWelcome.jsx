@@ -15,5 +15,5 @@ export function InteractiveWelcome() {
       </form>
       <Welcome name={name} />
     </>
-  )
+  );
 }
