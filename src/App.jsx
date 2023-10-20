@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import { GithubUsers } from "./GithubUsers";
 
 function App() {
-
   return (
     <>
-      
+      <GithubUsers />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
