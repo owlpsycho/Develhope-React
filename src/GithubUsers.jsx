@@ -11,7 +11,9 @@ export const GithubUsers = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    setUsernames([...usernames, searchUsername]);
+    setUsernames((data) => {
+      return ([...data, searchUsername])
+    });
     setSearchUsername("");
   };
 
