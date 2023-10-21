@@ -17,5 +17,10 @@ export function useLogin() {
     });
   };
 
-  return {formData, handleInputChange}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(`email: ${formData.username} password: ${formData.password}`)
+  }
+
+  return {formData, handleInputChange, handleSubmit}
 }

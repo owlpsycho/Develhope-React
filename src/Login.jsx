@@ -1,11 +1,11 @@
 import { useLogin } from "./useLogin";
 
 export function Login() {
-  const { formData, handleInputChange } = useLogin();
+  const { formData, handleInputChange, handleSubmit } = useLogin();
 
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
