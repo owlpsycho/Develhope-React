@@ -16,7 +16,7 @@ function FilteredList({ list }) {
         ))}
       </ul>
     </>
-  );
+  )
 }
 
 export default FilteredList;
