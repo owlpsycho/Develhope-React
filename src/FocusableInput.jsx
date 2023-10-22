@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Button } from 'react-bootstrap';
 
 export function FocusableInput() {
   const _inputRef = useRef(null);
@@ -10,6 +11,7 @@ export function FocusableInput() {
   return (
     <>
       <input ref={_inputRef} type="text" />
+      <Button onClick={() => alert('Button was Clicked')} variant="success">Click</Button>
     </>
   );
 }
