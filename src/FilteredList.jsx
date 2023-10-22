@@ -8,6 +8,7 @@ function FilteredList({ list }) {
   return (
     <>
       <h1>Filtered List</h1>
+      <hr />
       <ul>
         {filteredList.map((item) => (
           <li key={item.id}>
