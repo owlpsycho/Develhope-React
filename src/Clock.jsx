@@ -1,17 +1,11 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export const Clock = () => {
-  const [time, setTime] = useState("");
-
-  function currentTime() {
-    const time = new Date().toLocaleTimeString();
-    return time;
-  }
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(currentTime());
+      setTime(new Date().toLocaleTimeString());
     }, 1000);
 
     return () => {
