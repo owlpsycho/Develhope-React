@@ -1,34 +1,34 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export const GithubUser = ({ username }) => {
-  const API_URL = `https://api.github.com/users/${username}`
-
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  async function fetchData(username) {
+    try {
+      setLoading(true);
+      const response = await fetch(`https://api.github.com/users/${username}`);
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-    fetchData();
-  }, [])
+    fetchData(username);
+  }, [username]);
 
   return (
     <>
-      {
-        data && (
-          <div>
-            <img style={{borderRadius: "10%"}} src={data.avatar_url} alt="user avatar" />
-            <h1>{data.login}</h1>
-            <h1>{data.name}</h1>
-          </div>
-        )
-      }
+      {loading && <h1>Loading...</h1>}
+      <h1>{data?.login}</h1>
+      <img src={data?.avatar_url} style={{borderRadius: "10%"}}/>
+      <h2>{data?.name}</h2>
     </>
-  )
-}
+  );
+};
