@@ -12,7 +12,6 @@ export const Counter = () => {
         <button onClick={decrement}>Diminuisci</button>
         <button onClick={reset}>Resetta</button>
       </div>
-      <Link to="/">Home</Link>
     </>
   );
 };

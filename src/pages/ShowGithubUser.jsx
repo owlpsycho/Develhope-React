@@ -7,7 +7,6 @@ export const ShowGithubUser = () => {
     return (
         <>
             <GithubUser username={username} />
-            <Link to="/" >Home</Link>
         </>
     )
 }
