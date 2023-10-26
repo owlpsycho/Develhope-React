@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 
-const Welcome = ({ name }) => {
+export const Welcome = ({ name }) => {
   return (
     <>
       <h1>Welcome {name}</h1>
-      <Link to="/counter">Counter</Link>
+      <Link to="/counter">Counter</Link> | <Link to="users/owlpsycho">Profilo Github</Link>
     </>
   );
 };
-
-export default Welcome;
