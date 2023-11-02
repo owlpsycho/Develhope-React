@@ -1,10 +1,8 @@
 import useSWR from "swr";
 
 export function useGithubUser(username) {
-  const fetcher = (url) => fetch(url).then((res) => res.json());
-
   if (username) {
-    const { data, error, isLoading, mutate } = useSWR(`https://api.github.com/users/${username}`, fetcher);
+    const { data, error, isLoading, mutate } = useSWR(`https://api.github.com/users/${username}`);
 
     const handleRefetchBtn = () => {
       mutate();
